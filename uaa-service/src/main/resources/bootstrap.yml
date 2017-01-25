@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: uaa-service
+
+server:
+  port: 9191
+  context-path: /uaa
+  use-forward-headers: true
+
+eureka:
+  instance:
+      hostname: localhost
+      port: 8761
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+
+security:
+  basic:
+    enabled: false
+  ignored: /css/**,/js/**,/favicon.ico,/webjars/**
+
+logging:
+  level.org.springframework.security: DEBUG
+
