@@ -6,6 +6,11 @@ spring:
 
 server:
   port: 9999
+  ssl:
+    keyStore: keystore.p12
+    keyStorePassword: marinabaysands
+    keyStoreType: PKCS12
+    keyAlias: tomcat
 
 eureka:
   instance:
